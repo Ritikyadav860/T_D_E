@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:padding="8dp"
+
+    tools:context=".Check_to_proceed">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="406dp"
+        android:layout_height="424dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <ImageView
+        android:id="@+id/imageBike"
+        android:layout_width="112dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageRikshaw"
+        app:layout_constraintEnd_toStartOf="@+id/imageRikshaw"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageRikshaw"
+        app:srcCompat="@drawable/bike" />
+
+    <ImageView
+        android:id="@+id/imageRikshaw"
+        android:layout_width="106dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageminiXl"
+        app:layout_constraintStart_toEndOf="@+id/imageBike"
+        app:layout_constraintTop_toBottomOf="@+id/mapView"
+        app:srcCompat="@drawable/threewheeler" />
+
+    <ImageView
+        android:id="@+id/imageminiXl"
+        android:layout_width="102dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageRikshaw"
+        app:layout_constraintTop_toBottomOf="@+id/mapView"
+        app:srcCompat="@drawable/fourwheeler" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="55dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="64dp"
+        android:text="BIKE"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBike" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="68dp"
+        android:text="RIKSHAW"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageRikshaw" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="40dp"
+        android:text="MINI XL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageminiXl" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="8dp"
+        android:text="PAYMENT MODE :"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioButton_cash"
+        app:layout_constraintEnd_toStartOf="@+id/radioButton_cash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/radioButton_cash" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/radioButton_cash"
+        android:layout_width="94dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:text="CASH"
+
+        app:layout_constraintEnd_toStartOf="@+id/radioButton_online"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <RadioButton
+        android:id="@+id/radioButton_online"
+        android:layout_width="113dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:text="ONLINE"
+        app:layout_constraintBottom_toBottomOf="@+id/radioButton_cash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioButton_cash"
+        app:layout_constraintTop_toTopOf="@+id/radioButton_cash"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="PROCEED TO CHECKOUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_online" />
+
+    <ImageButton
+        android:id="@+id/btn_shedule"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_checkout"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_online"
+        app:srcCompat="@drawable/ic_baseline_timer_24" />
+
+    <TextView
+        android:id="@+id/bike_rate"
+        android:layout_width="79dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/rikshaw_rate"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioButton_cash"
+        app:layout_constraintStart_toEndOf="@+id/bike_rate"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/minixl_rate"
+        android:layout_width="80dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioButton_online"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/rikshaw_rate"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
